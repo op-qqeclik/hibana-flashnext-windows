@@ -1,0 +1,162 @@
+[
+ [
+  "tech",
+  "Write a short study note that derives how a CUDA graph removes launch overhead from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: why a cache coherence protocol needs invalidations. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "In your own words, work through how quantisation error accumulates across layers. Take the reader from the basic principle to the consequence, and add one worked example."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: how a network stack merges small packets. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: how continuous batching keeps a GPU saturated. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "Write a short study note that derives how a page table maps logical to physical KV blocks from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: how a memory controller reorders requests. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "In your own words, work through why a hash table degrades under adversarial keys. Take the reader from the basic principle to the consequence, and add one worked example."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: why a p99 latency hides behind a queue. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "Write a short study note that derives how a tensor core multiplies two fp8 tiles from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "Write a short study note that derives how a consensus round survives a slow follower from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "Write a short study note that derives why a seqlock is safe for a single writer from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "In your own words, work through how a GPU L2 slices addresses across partitions. Take the reader from the basic principle to the consequence, and add one worked example."
+ ],
+ [
+  "tech",
+  "In your own words, work through why per-token acceptance decays along a draft chain. Take the reader from the basic principle to the consequence, and add one worked example."
+ ],
+ [
+  "tech",
+  "In your own words, work through how speculative decoding trades compute for latency. Take the reader from the basic principle to the consequence, and add one worked example."
+ ],
+ [
+  "tech",
+  "Write a short study note that derives why averaging hides a bimodal distribution from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: how an OS scheduler balances latency and throughput. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "In your own words, work through how tensor cores handle a 9-row GEMM. Take the reader from the basic principle to the consequence, and add one worked example."
+ ],
+ [
+  "tech",
+  "In your own words, work through why a refresh cycle steals bandwidth. Take the reader from the basic principle to the consequence, and add one worked example."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: why caching a plan helps an attention kernel. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "reason",
+  "Reason about this carefully and commit to a conclusion: why the sum of the first n odd numbers is n squared. Show where the argument could fail."
+ ],
+ [
+  "reason",
+  "Take why a sorting lower bound is n log n. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Here is a claim worth testing: whether a greedy algorithm is optimal for interval scheduling. Argue one side fully, then state the strongest objection and answer it."
+ ],
+ [
+  "reason",
+  "Here is a claim worth testing: why the halting problem is undecidable. Argue one side fully, then state the strongest objection and answer it."
+ ],
+ [
+  "reason",
+  "Here is a claim worth testing: why a cached plan can be reused across shapes. Argue one side fully, then state the strongest objection and answer it."
+ ],
+ [
+  "reason",
+  "Take whether two hypotheses can be distinguished by one experiment. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Reason about this carefully and commit to a conclusion: why the acceptance rate of a draft chain is a product of conditional probabilities. Show where the argument could fail."
+ ],
+ [
+  "reason",
+  "Take whether a memory-bound kernel can be improved by more warps. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Take why a 9-row GEMM wastes tensor cores. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Here is a claim worth testing: why the roofline changes with batch size. Argue one side fully, then state the strongest objection and answer it."
+ ],
+ [
+  "reason",
+  "Here is a claim worth testing: whether a 5% speedup is statistically real given drift. Argue one side fully, then state the strongest objection and answer it."
+ ],
+ [
+  "reason",
+  "Here is a claim worth testing: why the mean of a bimodal distribution misleads. Argue one side fully, then state the strongest objection and answer it."
+ ],
+ [
+  "reason",
+  "Take whether a co-tenant explains a throughput drop. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Take why per-token cost grows with context length. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Reason about this carefully and commit to a conclusion: whether quantisation error compounds across layers. Show where the argument could fail."
+ ],
+ [
+  "reason",
+  "Reason about this carefully and commit to a conclusion: why a sampling temperature changes the acceptance rate. Show where the argument could fail."
+ ],
+ [
+  "reason",
+  "Take whether a draft head can be improved by more data. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Reason about this carefully and commit to a conclusion: why a numerical change requires a different equivalence gate. Show where the argument could fail."
+ ],
+ [
+  "reason",
+  "Reason about this carefully and commit to a conclusion: whether the ceiling is bandwidth or latency. Show where the argument could fail."
+ ],
+ [
+  "reason",
+  "Take why an expert layer is read in full even for one token. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ]
+]

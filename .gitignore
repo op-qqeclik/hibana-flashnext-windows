@@ -1,0 +1,38 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ---- local / machine-specific ----
+*.log
+results/
+*.wfw
+config.ps1
+!setup/config.example.ps1
+
+# ---- model weights & caches (NEVER commit) ----
+*.safetensors
+*.gguf
+*.bin
+*.pt
+*.pth
+*.npz
+hub/
+w3/
+mtp/
+hf-cache/
+
+# ---- profiling artefacts ----
+*.speedscope
+*.trace
+*.nsys-rep
+*.sqlite
+*.prof
+torch_profile/
+
+# ---- OS ----
+Thumbs.db
+desktop.ini
+.DS_Store

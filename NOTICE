@@ -1,0 +1,41 @@
+# NOTICE
+
+This repository ships **glue code, patch scripts, measurement harnesses and documentation**.
+It deliberately does **not** redistribute:
+
+| Component | Status in this repo | Where to get it |
+|---|---|---|
+| **Hibana** inference engine (`hibana`) | **Not included.** Only idempotent patch scripts (`port/winpatch.py`) and human-readable diffs (`perf/*.patch`) are provided. | From the engine's author / your licensed copy. Version used here: `hibana 0.1.0`. |
+| **Qwen3.8-Flash-Next** weights (NVFP4 trunk, 135 GB) | Not included. | `RadixArk/Qwen3.8-Flash-Next-NVFP4` on Hugging Face |
+| **W3 3-bit expert weights** (48 GB) | Not included. | Same publisher as above (see `setup/config.example.ps1`) |
+| **Distilled MTP draft heads** (`mtp_weights.*.safetensors`, ~5.2 GB each) | Not included. Training recipe + eval harness are provided instead (`train/`, `docs/03-mtp-distillation.md`). | Train your own with the recipe, or use the stock draft head that ships with the model. |
+| CUDA Toolkit 13.0, MSVC 2019–2022 | Not included. | NVIDIA / Microsoft |
+| `torch 2.13.0+cu130`, `triton-windows 3.7.1.post27`, `flashinfer 0.6.17`, `apache-tvm-ffi`, `xgrammar 0.2.8`, `cuda-tile`, `cudnn-frontend` | Not included; installed by `port/setup_windows.py`. | PyPI / download.pytorch.org / flashinfer wheel index |
+
+## Upstream licenses (as of the versions pinned in this repo)
+
+- PyTorch — BSD-3-Clause
+- Triton / triton-windows — MIT
+- flashinfer — Apache-2.0
+- apache-tvm-ffi — Apache-2.0
+- xgrammar — Apache-2.0
+- ninja — Apache-2.0
+- CUDA Toolkit, cuDNN — NVIDIA Software License Agreement
+- Visual Studio Build Tools — Microsoft license terms
+- Hibana engine — **unknown / publisher-defined**; the `perf/*.patch` files are interoperability diffs, not a redistribution of the engine
+
+## What is original work here (MIT, see LICENSE)
+
+- `port/winpatch.py`, `port/_plat.py`, `port/win_compat.h`, `port/setup_windows.py`
+- `setup/*.ps1`, `launch/*.bat|ps1`
+- `bench/*.py` (measurement harness, prompts, acceptance sweep)
+- `train/*` (corpus builder, distillation recipe, acceptance evaluator)
+- every file under `docs/` and `reference/`
+
+## Honesty note on benchmarks
+
+Every number in `docs/04-benchmarks.md` is from a single machine (`RTX PRO 6000 Blackwell 96 GB`,
+Windows 10 19045, driver 616.92) and is reported with its measurement conditions. Numbers measured
+before 2026-11-19 were, in several cases, later shown to be contaminated by prompt overlap with the
+training corpus — see `docs/06-postmortem.md` §"评测污染". Where a claim was retracted, both the
+original and the retraction are kept in this repo.

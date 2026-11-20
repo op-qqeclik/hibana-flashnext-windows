@@ -1,0 +1,482 @@
+[
+ [
+  "tech",
+  "Write a short study note that derives how a CUDA graph removes launch overhead from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: why a cache coherence protocol needs invalidations. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "In your own words, work through how quantisation error accumulates across layers. Take the reader from the basic principle to the consequence, and add one worked example."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: how a network stack merges small packets. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: how continuous batching keeps a GPU saturated. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "Write a short study note that derives how a page table maps logical to physical KV blocks from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: how a memory controller reorders requests. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "In your own words, work through why a hash table degrades under adversarial keys. Take the reader from the basic principle to the consequence, and add one worked example."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: why a p99 latency hides behind a queue. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "Write a short study note that derives how a tensor core multiplies two fp8 tiles from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "Write a short study note that derives how a consensus round survives a slow follower from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "Write a short study note that derives why a seqlock is safe for a single writer from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "In your own words, work through how a GPU L2 slices addresses across partitions. Take the reader from the basic principle to the consequence, and add one worked example."
+ ],
+ [
+  "tech",
+  "In your own words, work through why per-token acceptance decays along a draft chain. Take the reader from the basic principle to the consequence, and add one worked example."
+ ],
+ [
+  "tech",
+  "In your own words, work through how speculative decoding trades compute for latency. Take the reader from the basic principle to the consequence, and add one worked example."
+ ],
+ [
+  "tech",
+  "Write a short study note that derives why averaging hides a bimodal distribution from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: how an OS scheduler balances latency and throughput. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "In your own words, work through how tensor cores handle a 9-row GEMM. Take the reader from the basic principle to the consequence, and add one worked example."
+ ],
+ [
+  "tech",
+  "In your own words, work through why a refresh cycle steals bandwidth. Take the reader from the basic principle to the consequence, and add one worked example."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: why caching a plan helps an attention kernel. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "Write a short study note that derives how a speculative chain computes its expected length from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "In your own words, work through how a TLS handshake proves freshness. Take the reader from the basic principle to the consequence, and add one worked example."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: distributed consensus and log replication. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "Write a short study note that derives how to decide a optimisation is not worth it from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: why a graph launch scales with node count. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: roofline analysis for a decode step. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "Write a short study note that derives mixture-of-experts routing and load balance from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "Write a short study note that derives how to reason from a budget to a ceiling from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "Write a short study note that derives why a transposed layout changes coalescing from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "Write a short study note that derives how to attribute time to a subsystem from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: how a thermal limit shows up in throughput. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "In your own words, work through how a vector instruction handles a misaligned access. Take the reader from the basic principle to the consequence, and add one worked example."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: why prefill and decode have different bottlenecks. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "Write a short study note that derives why a 3-bit format needs a reconstruction step from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "Write a short study note that derives how transformer weights are quantised to 4 bits from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: why a per-kernel table can mislead about a step. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: why an occupancy hint can hurt a bandwidth kernel. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "Write a short study note that derives why temperature changes acceptance from scratch, and finish with the one thing people usually get wrong."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: why an idempotency key prevents a double write. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "tech",
+  "Someone asks you, patiently: what makes a performance claim falsifiable. Answer by reasoning, not by listing facts."
+ ],
+ [
+  "reason",
+  "Reason about this carefully and commit to a conclusion: why the sum of the first n odd numbers is n squared. Show where the argument could fail."
+ ],
+ [
+  "reason",
+  "Take why a sorting lower bound is n log n. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Here is a claim worth testing: whether a greedy algorithm is optimal for interval scheduling. Argue one side fully, then state the strongest objection and answer it."
+ ],
+ [
+  "reason",
+  "Here is a claim worth testing: why the halting problem is undecidable. Argue one side fully, then state the strongest objection and answer it."
+ ],
+ [
+  "reason",
+  "Here is a claim worth testing: why a cached plan can be reused across shapes. Argue one side fully, then state the strongest objection and answer it."
+ ],
+ [
+  "reason",
+  "Take whether two hypotheses can be distinguished by one experiment. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Reason about this carefully and commit to a conclusion: why the acceptance rate of a draft chain is a product of conditional probabilities. Show where the argument could fail."
+ ],
+ [
+  "reason",
+  "Take whether a memory-bound kernel can be improved by more warps. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Take why a 9-row GEMM wastes tensor cores. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Here is a claim worth testing: why the roofline changes with batch size. Argue one side fully, then state the strongest objection and answer it."
+ ],
+ [
+  "reason",
+  "Here is a claim worth testing: whether a 5% speedup is statistically real given drift. Argue one side fully, then state the strongest objection and answer it."
+ ],
+ [
+  "reason",
+  "Here is a claim worth testing: why the mean of a bimodal distribution misleads. Argue one side fully, then state the strongest objection and answer it."
+ ],
+ [
+  "reason",
+  "Take whether a co-tenant explains a throughput drop. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Take why per-token cost grows with context length. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Reason about this carefully and commit to a conclusion: whether quantisation error compounds across layers. Show where the argument could fail."
+ ],
+ [
+  "reason",
+  "Reason about this carefully and commit to a conclusion: why a sampling temperature changes the acceptance rate. Show where the argument could fail."
+ ],
+ [
+  "reason",
+  "Take whether a draft head can be improved by more data. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Reason about this carefully and commit to a conclusion: why a numerical change requires a different equivalence gate. Show where the argument could fail."
+ ],
+ [
+  "reason",
+  "Reason about this carefully and commit to a conclusion: whether the ceiling is bandwidth or latency. Show where the argument could fail."
+ ],
+ [
+  "reason",
+  "Take why an expert layer is read in full even for one token. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Take whether a page table can be grown in place. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Reason about this carefully and commit to a conclusion: why a graph launch costs more with more nodes. Show where the argument could fail."
+ ],
+ [
+  "reason",
+  "Here is a claim worth testing: whether a kernel fusion always helps. Argue one side fully, then state the strongest objection and answer it."
+ ],
+ [
+  "reason",
+  "Here is a claim worth testing: why a small benchmark underestimates bandwidth. Argue one side fully, then state the strongest objection and answer it."
+ ],
+ [
+  "reason",
+  "Here is a claim worth testing: whether caching helps when the key is unique. Argue one side fully, then state the strongest objection and answer it."
+ ],
+ [
+  "reason",
+  "Reason about this carefully and commit to a conclusion: why a proof by contradiction is valid. Show where the argument could fail."
+ ],
+ [
+  "reason",
+  "Reason about this carefully and commit to a conclusion: whether a correlation implies a mechanism. Show where the argument could fail."
+ ],
+ [
+  "reason",
+  "Reason about this carefully and commit to a conclusion: why an estimate can be right for the wrong reason. Show where the argument could fail."
+ ],
+ [
+  "reason",
+  "Here is a claim worth testing: whether a decision rule is consistent under uncertainty. Argue one side fully, then state the strongest objection and answer it."
+ ],
+ [
+  "reason",
+  "Take why a discounted reward changes the optimal policy. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Take whether a contract is enforceable without a witness. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Take why a differential diagnosis must be narrowed by priors. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Take whether a failure mode can be reproduced deterministically. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Reason about this carefully and commit to a conclusion: why a system becomes unstable past a load threshold. Show where the argument could fail."
+ ],
+ [
+  "reason",
+  "Take whether a queue is stable under bursty arrivals. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Take why a bisection converges faster than a scan. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Reason about this carefully and commit to a conclusion: whether a hash collision can be forced. Show where the argument could fail."
+ ],
+ [
+  "reason",
+  "Reason about this carefully and commit to a conclusion: why an entropy bound limits compression. Show where the argument could fail."
+ ],
+ [
+  "reason",
+  "Take whether a consensus protocol needs a leader. Separate what is established from what is merely plausible, and say what evidence would settle it."
+ ],
+ [
+  "reason",
+  "Here is a claim worth testing: why an estimate can be right for the wrong reason. Argue one side fully, then state the strongest objection and answer it."
+ ],
+ [
+  "narr",
+  "Write a reflective passage that begins with how a farmer decides when to harvest and ends somewhere the reader did not expect."
+ ],
+ [
+  "narr",
+  "Write a reflective passage that begins with a long-form magazine feature and ends somewhere the reader did not expect."
+ ],
+ [
+  "narr",
+  "Write a reflective passage that begins with why a song works and a similar one does not and ends somewhere the reader did not expect."
+ ],
+ [
+  "narr",
+  "Describe a scene built around how a chess player chooses between two moves. Keep the prose concrete and unhurried."
+ ],
+ [
+  "narr",
+  "Describe a scene built around why a machine failed on the day it did. Keep the prose concrete and unhurried."
+ ],
+ [
+  "narr",
+  "Tell the story of a screenplay scene with action lines and spoken lines, and let the meaning emerge from the details rather than being stated."
+ ],
+ [
+  "narr",
+  "Write a reflective passage that begins with why a community rebuilt faster than its neighbour and ends somewhere the reader did not expect."
+ ],
+ [
+  "narr",
+  "Write a reflective passage that begins with why a familiar habit is harder to break than it looks and ends somewhere the reader did not expect."
+ ],
+ [
+  "narr",
+  "Tell the story of why a shortcut turned out longer, and let the meaning emerge from the details rather than being stated."
+ ],
+ [
+  "narr",
+  "Tell the story of a lab-notebook style reasoning log with false starts kept in, and let the meaning emerge from the details rather than being stated."
+ ],
+ [
+  "narr",
+  "Tell the story of a technical essay for an engineering audience, and let the meaning emerge from the details rather than being stated."
+ ],
+ [
+  "narr",
+  "Tell the story of how a cook decides when a dish is ready, and let the meaning emerge from the details rather than being stated."
+ ],
+ [
+  "narr",
+  "Write a reflective passage that begins with why a familiar habit is harder to break than it looks and ends somewhere the reader did not expect."
+ ],
+ [
+  "narr",
+  "Describe a scene built around why a market price moved the way it did. Keep the prose concrete and unhurried."
+ ],
+ [
+  "narr",
+  "Tell the story of why a well-planned trip fell apart, and let the meaning emerge from the details rather than being stated."
+ ],
+ [
+  "narr",
+  "Tell the story of a worked solution written the way a good teacher would write it, and let the meaning emerge from the details rather than being stated."
+ ],
+ [
+  "narr",
+  "Tell the story of why two equally good teams got different results, and let the meaning emerge from the details rather than being stated."
+ ],
+ [
+  "narr",
+  "Write a reflective passage that begins with why an argument convinced one person and alienated another and ends somewhere the reader did not expect."
+ ],
+ [
+  "narr",
+  "Describe a scene built around whether a rumour could have been stopped earlier. Keep the prose concrete and unhurried."
+ ],
+ [
+  "narr",
+  "Describe a scene built around a personal essay that thinks through the problem while telling a small story. Keep the prose concrete and unhurried."
+ ],
+ [
+  "narr",
+  "Tell the story of a chapter of a novel in which a character works the problem out in their head, and let the meaning emerge from the details rather than being stated."
+ ],
+ [
+  "narr",
+  "Describe a scene built around why a translation loses something specific. Keep the prose concrete and unhurried."
+ ],
+ [
+  "narr",
+  "Write a reflective passage that begins with how a sailor reads weather from the sky and ends somewhere the reader did not expect."
+ ],
+ [
+  "narr",
+  "Describe a scene built around how a parent decides a child is ready. Keep the prose concrete and unhurried."
+ ],
+ [
+  "narr",
+  "Tell the story of how a runner paces a long race, and let the meaning emerge from the details rather than being stated."
+ ],
+ [
+  "narr",
+  "Describe a scene built around how an editor cuts a long draft down. Keep the prose concrete and unhurried."
+ ],
+ [
+  "narr",
+  "Tell the story of why an old building is still standing, and let the meaning emerge from the details rather than being stated."
+ ],
+ [
+  "narr",
+  "Describe a scene built around why a memory of a place is more vivid than the photograph. Keep the prose concrete and unhurried."
+ ],
+ [
+  "narr",
+  "Tell the story of how a journalist verifies a single anonymous claim, and let the meaning emerge from the details rather than being stated."
+ ],
+ [
+  "narr",
+  "Write a reflective passage that begins with why a rumour spread faster than the correction and ends somewhere the reader did not expect."
+ ],
+ [
+  "narr",
+  "Write a reflective passage that begins with why a translation loses something specific and ends somewhere the reader did not expect."
+ ],
+ [
+  "narr",
+  "Write a reflective passage that begins with how a doctor narrows a diagnosis with few tests and ends somewhere the reader did not expect."
+ ],
+ [
+  "narr",
+  "Write a reflective passage that begins with how a city decides where to put a bridge and ends somewhere the reader did not expect."
+ ],
+ [
+  "narr",
+  "Tell the story of why a species survives in one valley and not the next, and let the meaning emerge from the details rather than being stated."
+ ],
+ [
+  "narr",
+  "Tell the story of why a design that felt right failed in use, and let the meaning emerge from the details rather than being stated."
+ ],
+ [
+  "narr",
+  "Write a reflective passage that begins with how a negotiator finds the room to move and ends somewhere the reader did not expect."
+ ],
+ [
+  "narr",
+  "Tell the story of a scene of two people arguing the question out loud, with dialogue, and let the meaning emerge from the details rather than being stated."
+ ],
+ [
+  "narr",
+  "Write a reflective passage that begins with how a programmer decides a bug is in the tool and not the code and ends somewhere the reader did not expect."
+ ],
+ [
+  "narr",
+  "Write a reflective passage that begins with how a museum chooses what to keep in storage and ends somewhere the reader did not expect."
+ ],
+ [
+  "narr",
+  "Write a reflective passage that begins with how a teacher spots a misunderstanding and ends somewhere the reader did not expect."
+ ]
+]

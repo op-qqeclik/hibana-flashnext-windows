@@ -1,0 +1,17 @@
+--- a/hibana/kernels/w3.py
++++ b/hibana/kernels/w3.py
+@@ -302,6 +302,14 @@
+ def wide_for(n: int, k: int, m: int) -> tuple[int, int] | None:
+     """(config, splits) of the wide kernel for an [m, k] x [k, n] call, or None for the narrow kernel."""
+     if m <= 32:
++        # EXPERIMENT: at 9 rows the narrow kernel launches only (n // 128) blocks x 4 warps = 160-320
++        # warps on 188 SMs (under one warp per SM) and streams weights at ~51% of peak.
++        # HIBANA_W3_WIDE_M=<config[,splits]> forces the wide kernel here so configs can be swept with
++        # one launcher edit: config = MT*1000 + WM*100 + WN*10 + STAGES, rows = 16*MT*WM.
++        forced = os.environ.get("HIBANA_W3_WIDE_M")
++        if forced and (n, k) in WIDE:
++            cfg, _, sp = forced.partition(",")
++            return int(cfg), int(sp or 1)
+         return None
+     if (n, k) in WIDE:
+         return WIDE[(n, k)][48 if m <= 48 else 64 if m <= 64 else 128]
