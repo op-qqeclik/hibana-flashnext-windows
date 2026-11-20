@@ -176,11 +176,20 @@ bit-exactness gate (`refcheck.py`) in front of every accepted change.
 
 ---
 
+## Sources & upstream
+
+| What | Where | License |
+|---|---|---|
+| **Hibana** inference engine (`hibana 0.1.0`) | <https://github.com/sharar-project/hibana> | **Apache-2.0** |
+| Hibana paper | <https://arxiv.org/abs/2611.10469> — *Hibana: Fast Agentic Inference on Unified-Memory Devices* | — |
+| **MTP draft-head distillation method** (4-step self-feeding KL + CE, the "lossless speedup" recipe we followed) | <https://github.com/CharAzinabulu0079/SAA-Brain-3.8-flash-next-Hibana> | see that repo |
+| Model weights (NVFP4 trunk, 135 GB) | <https://huggingface.co/RadixArk/Qwen3.8-Flash-Next-NVFP4> | publisher's terms |
+| 3-bit W3 expert weights (48 GB) | same publisher — see `W3_REPO` in `setup/config.example.ps1` | publisher's terms |
+
 ## Citing / attribution
 
-The distillation recipe and the "lossless speedup" methodology come from
-`CharAzinabulu0079/SAA-Brain-3.8-flash-next-Hibana`. The 3-bit W3 kernel layout, PLE design and MTP
-proposer come from the Hibana engine. This repo only documents how they behave on a discrete-GPU Windows
+See the table below for where each piece came from. The 3-bit W3 kernel layout, the PLE design and the
+MTP proposer are the engine's; the distillation recipe is not ours either. This repo only documents how they behave on a discrete-GPU Windows
 host, plus the glue that makes it run there.
 
 If you use the measured numbers, please link this repo **and** quote the conditions (GPU, driver,

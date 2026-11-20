@@ -20,7 +20,7 @@
 | 内存 | 与 GPU 同池 | 191 GB DDR5（PLE 表 47.7 GB 靠它 page-cache） |
 | 显存带宽 | 273 GB/s | 1792 GB/s（实测 copy 1282、read 1173、MoE 内核 1536–1608） |
 | 驱动 | — | 616.92 |
-| 引擎 | hibana 0.1.0：torch 2.13.0+cu130 / flashinfer 0.6.17 / triton 3.7.1 / xgrammar 0.2.8 | **同一份代码**，Windows 原生（不走 WSL、不装 Docker） |
+| 引擎 | [hibana 0.1.0](https://github.com/sharar-project/hibana)（Apache-2.0）：torch 2.13.0+cu130 / flashinfer 0.6.17 / triton 3.7.1 / xgrammar 0.2.8 | **同一份代码**，Windows 原生（不走 WSL、不装 Docker） |
 | 权重 | `Qwen3.8-Flash-Next-NVFP4` 135 GB + W3 3-bit 48 GB | 同一份，局域网直传（275 MB/s，4 + 3 分钟） |
 
 **一句话目标**：`hibana serve flashnext` 在 107 上原样跑起来，OpenAI 兼容接口 `:30004` 能出中文、代码、看图。

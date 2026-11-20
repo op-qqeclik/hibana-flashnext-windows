@@ -163,8 +163,17 @@ trainer 的 `accept_len` 在**跨语料留出集**上从 2.668 涨到 3.017（**
 
 ## 归属
 
-蒸馏配方与"无损提速"方法论来自 `CharAzinabulu0079/SAA-Brain-3.8-flash-next-Hibana`；
-3-bit W3 内核布局、PLE 设计与 MTP proposer 来自 Hibana 引擎。
+## 出处
+
+| 内容 | 链接 | 许可 |
+|---|---|---|
+| **Hibana 引擎**（`hibana 0.1.0`） | <https://github.com/sharar-project/hibana> | **Apache-2.0** |
+| Hibana 论文 | <https://arxiv.org/abs/2611.10469> — *Hibana: Fast Agentic Inference on Unified-Memory Devices* | — |
+| **MTP 草稿头蒸馏方法**（4 步自喂 KL + CE、"无损提速"那套配方） | <https://github.com/CharAzinabulu0079/SAA-Brain-3.8-flash-next-Hibana> | 见该仓库 |
+| 模型权重（NVFP4 trunk，135 GB） | <https://huggingface.co/RadixArk/Qwen3.8-Flash-Next-NVFP4> | 发布方条款 |
+| 3-bit W3 专家权重（48 GB） | 同一发布方 —— 见 `setup/config.example.ps1` 的 `W3_REPO` | 发布方条款 |
+
+3-bit W3 内核布局、PLE 设计与 MTP proposer 属于引擎；蒸馏配方也不是我们原创的。
 本仓库只记录它们在**独立显存 + Windows 主机**上的行为，以及让它跑起来的胶水。
 
 引用本文数字时请**同时**带上条件（GPU、驱动、prompt 集、贪心还是 temp 0.3）——

@@ -5,7 +5,7 @@ It deliberately does **not** redistribute:
 
 | Component | Status in this repo | Where to get it |
 |---|---|---|
-| **Hibana** inference engine (`hibana`) | **Not included.** Only idempotent patch scripts (`port/winpatch.py`) and human-readable diffs (`perf/*.patch`) are provided. | From the engine's author / your licensed copy. Version used here: `hibana 0.1.0`. |
+| **Hibana** inference engine (`hibana`) | **Not included.** Only idempotent patch scripts (`port/winpatch.py`) and human-readable diffs (`perf/*.patch`) are provided. | <https://github.com/sharar-project/hibana> — **Apache-2.0**. Version used here: `hibana 0.1.0`. |
 | **Qwen3.8-Flash-Next** weights (NVFP4 trunk, 135 GB) | Not included. | `RadixArk/Qwen3.8-Flash-Next-NVFP4` on Hugging Face |
 | **W3 3-bit expert weights** (48 GB) | Not included. | Same publisher as above (see `setup/config.example.ps1`) |
 | **Distilled MTP draft heads** (`mtp_weights.*.safetensors`, ~5.2 GB each) | Not included. Training recipe + eval harness are provided instead (`train/`, `docs/03-mtp-distillation.md`). | Train your own with the recipe, or use the stock draft head that ships with the model. |
@@ -22,7 +22,9 @@ It deliberately does **not** redistribute:
 - ninja — Apache-2.0
 - CUDA Toolkit, cuDNN — NVIDIA Software License Agreement
 - Visual Studio Build Tools — Microsoft license terms
-- Hibana engine — **unknown / publisher-defined**; the `perf/*.patch` files are interoperability diffs, not a redistribution of the engine
+- **Hibana engine** — **Apache-2.0**, <https://github.com/sharar-project/hibana>; the `perf/*.patch` files are interoperability diffs against a copy you obtain yourself, not a redistribution of the engine
+- **SAA-Brain-3.8-flash-next-Hibana** (distillation methodology, referenced not vendored) — <https://github.com/CharAzinabulu0079/SAA-Brain-3.8-flash-next-Hibana>; see that repository for its license
+- Hibana paper — <https://arxiv.org/abs/2611.10469>
 
 ## What is original work here (MIT, see LICENSE)
 
