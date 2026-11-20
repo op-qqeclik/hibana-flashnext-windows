@@ -116,7 +116,8 @@ reference/ HANDOFF.md（3000 行逐轮原始记录）· LESSONS.md · kernel-fus
 ## 蒸馏的结论（一句话版，因为这是最有用的负结果）
 
 我们完整跑了 SAA-Brain 的 4 步自喂 KL 蒸馏：自造语料 35 万 → 122 万 → 205 万 token、
-8 步 rollout、CE + KL_top32、512 专家上 rank-16/32 LoRA，产出 23 个草稿头（v2…v23）。
+8 步自喂 rollout、CE + KL_top32、512 专家上 rank-16/32 LoRA，产出 23 个草稿头（v2…v23）
+（随仓库的训练脚本里这个常量是 4，复现 v 系列要改成 8）。
 trainer 的 `accept_len` 在**跨语料留出集**上从 2.668 涨到 3.017（**+13.1%**），
 引擎侧看起来是 **+11% 单流** —— 然后我们建了 120 条句式与训练语料完全不同的新 prompt，
 五个头全部落在 **2.3%** 以内（0.5912 vs 0.5912 accept，3.986 vs 4.030 tok/round）。

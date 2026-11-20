@@ -126,8 +126,8 @@ reference/ HANDOFF.md (3 000 lines of raw round-by-round log) · LESSONS.md · k
 
 We ran the full 4-step self-feeding KL distillation pipeline from
 [`SAA-Brain-3.8-flash-next-Hibana`](https://github.com/CharAzinabulu0079/SAA-Brain-3.8-flash-next-Hibana)
-on our own prose corpus (0.35 M → 1.22 M → 1.37 M tokens, 8-step rollout, CE + KL_top32, rank-16 LoRA on
-512 experts), produced 23 draft heads (`v2 … v23`), and watched the in-trainer metric climb
+on our own prose corpus (0.35 M → 1.22 M → 1.37 M tokens, 8-step self-feeding rollout, CE + KL_top32, rank-16 LoRA on
+512 experts; the trainer we ship has that constant at 4 — set it to 8 to reproduce the v-series), produced 23 draft heads (`v2 … v23`), and watched the in-trainer metric climb
 (`accept_len` 2.668 → 3.017, **+13.1 %**) on a *held-out* prose set. On the engine it looked like
 **+11 % single-stream** — and then we built a fresh 120-prompt set with sentence patterns disjoint from the
 training corpus, and all five heads landed within **2.3 %** of the stock head

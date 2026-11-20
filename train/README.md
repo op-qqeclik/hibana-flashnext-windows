@@ -18,7 +18,7 @@ src/generate_corpus.py        早期多桶语料生成（chat/prose/roleplay/cod
 
 | 项 | 值 |
 |---|---|
-| rollout 步数 | 4 |
+| rollout 步数 | v 系列 **8**；随仓库这份脚本里写死为 `4`（改 `rollout_steps` 常量 + `step_weights` 给 8 项） |
 | 逐步损失权重 | `[1.0, 0.8, 0.64, 0.5]` |
 | 损失 | `0.5 · CE + 0.5 · KL_top32` |
 | top-k | 32 |

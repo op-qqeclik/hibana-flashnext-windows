@@ -1,7 +1,7 @@
 # 03 · MTP 草稿头蒸馏与语料训练（完整流程 + 结果 + 为什么它没用）
 
 > **English abstract** — The complete MTP draft-head distillation pipeline we ran: on-policy corpus
-> generation with the model itself, top-32 logit extraction, a 4-step self-feeding KL+CE rollout loss with
+> generation with the model itself, top-32 logit extraction, an 8-step self-feeding KL+CE rollout loss with
 > rank-32 LoRA on the MoE experts, export as a `safetensors` overlay, mount via one env var, and evaluation
 > by `accept_len` then by engine throughput. Then the part that matters: **on a clean 120-prompt set, all
 > five distilled heads landed within 2.3 % of the stock head.** The speedup we thought we had was prompt
@@ -39,7 +39,7 @@
 ③ 用目标模型抽特征（隐藏态 + top-32 logits）
    train/src/extract_mtp_features.py  →  shard_*.pt（每分片 60 条）
         ↓
-④ 蒸馏训练（4 步自喂 rollout，CE + KL_top32，MoE 专家上挂 LoRA）
+④ 蒸馏训练（8 步自喂 rollout，CE + KL_top32，MoE 专家上挂 LoRA）
    train/src/train_mtp_kl.py    →  mtp_weights.safetensors（5.21 GB）
         ↓
 ⑤ 挂载 + 评测
@@ -47,7 +47,7 @@
 ```
 
 **为什么是"自喂（self-feeding）"**：草稿头吃的是**自己上一轮的输出位置**，不是教师强制的位置。
-`rollout_steps=4` 表示在每条序列上取 64 个锚点，从锚点开始让草稿头自己滚 4 步，
+`rollout_steps=8`（v2–v23 那批的实际配置；随仓库这份脚本里写死为 4）表示在每条序列上取 64 个锚点，从锚点开始让草稿头自己滚 8 步，
 每一步都和教师（目标模型）在同一位置的分布对齐。这样训练分布 = 推理分布。
 
 ---
@@ -100,7 +100,7 @@ python training/train_mtp_kl.py \
 
 | 超参 | 值 | 备注 |
 |---|---|---|
-| `rollout_steps` | **4** | 草稿头自喂 4 步 |
+| `rollout_steps` | v 系列用 **8**；随仓库的这份脚本里是写死的 **4** | 草稿头自喂步数（改常量即可；`step_weights` 要相应给 8 项） |
 | 逐步损失权重 | **`[1.0, 0.8, 0.64, 0.5]`** | 越靠后的自喂步权重越低（误差累积） |
 | 损失 | **`0.5 · CE + 0.5 · KL_top32`** | 见下 |
 | `topk` | **32** | 教师 logits 只留 top-32，写进特征分片 |
