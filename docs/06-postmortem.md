@@ -170,8 +170,8 @@ c1 = 273 tok/s
 
 ## 7. 未解决的 5 件事（交接清单）
 
-1. **≥1 K token 的 prompt 会崩**（`hyper_prefill.mix` 的 `_scaled_mm` 在 SM120 不支持）；修到第二层
-   （`qsa_score_exact` 的 JIT 链接）后回退，未闭环。
+1. ~~**≥1 K token 的 prompt 会崩**~~ —— **2026-11-20 已在同一台机器上不再复现**：4 K→128 K 的 prefill
+   扫描全部正常（21.4 k→9.0 k tok/s），见 `docs/07`。修复细节未纳入本次交接，从"未解决"降级为"已修复但无记录"。
 2. **~50 K token 的长会话 `cached=0`**、每轮全量重算、TTFT 30 s+（怀疑 prompt cache 只有 4.2 GiB
    装不下单条状态 + 系统提示有易变块导致前缀在 21 776 token 处断掉）。
 3. **DFlash2 块并行草稿头**权重与引擎特征 tap 不对齐（zh accept 0.066），必须重训。

@@ -30,6 +30,19 @@ Greedy decoding, 5-point concurrency sweep, `--max-batch 16`, depth table `1:8,2
 | c8  | **1321.8** | 831.2 | 1570 | 84 % |
 | c16 | **2035.5** | 1298.8 | 1690 | **120 %** (ceiling estimate was wrong — see docs/04) |
 
+### Independent re-measurement (SparkDash, 2026-11-20 · temp 0.7 · 400 tok · thinking off)
+
+| workload | ×1 | ×4 | ×16 |
+|---|---|---|---|
+| Prose | **327.3** | 724.2 | 1883.4 |
+| Code | **526.0** | 905.5 | 1998.1 |
+| Structured | **314.8** | 961.2 | 2289.1 |
+
+Prefill ladder (unique prefix per size): **21 376 tok/s at 4 K (TTFT 377 ms) → 9 018 tok/s at 128 K
+(TTFT 14.72 s)**. The two harnesses agree on single-stream prose to **0.5 %** (327.3 vs 325.6) — but the
+tables above and below are **not interchangeable** (different build, length and sampling). Details and the
+one caveat: [docs/07-sparkdash.md](docs/07-sparkdash.md).
+
 Prose single-stream (what you actually feel while chatting): **en 325.6 / zh 332.3 tok/s**.
 Against the DGX Spark (GB10) production recipe this is **1.8–2.4× single-stream** and **~3.1× at 16-way**.
 

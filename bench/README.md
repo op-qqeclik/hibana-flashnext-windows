@@ -30,7 +30,8 @@
 | `depth_sampled.py` | — | 采样档下的深度表扫描 |
 | `ple_hash_test.py` / `ple_hash_check.py` | — | PLE 取行的离线回归（**不需要 GPU**），改 PLE 路径后先跑它 |
 | `bench_final.py` / `bench_matrix.py` / `bench_c1_delta.py` | — | 早期矩阵式基准（保留作历史对照） |
-| `ctx_speed.py` / `ctx_stream.py` / `chat_ttft.py` | — | 上下文长度 / 流式 / TTFT 专项 |
+| `prefill_ladder.py` | `[url] [sizes]` | **prefill 阶梯**：4k→128k，TTFT 取首个流式 token，每档唯一前缀（对应 `docs/07`） |
+| `ctx_speed.py` / `ctx_stream.py` / `chat_ttft.py` | — | 解码速度 vs 上下文 / 流式 / TTFT 专项 |
 | `temp_cmp.py` / `stream_vs_not.py` | — | 温度对比、流式与非流式对比 |
 
 ## 草稿头怎么"选"

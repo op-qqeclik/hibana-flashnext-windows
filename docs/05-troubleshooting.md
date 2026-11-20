@@ -108,11 +108,16 @@ DSH/客户端看起来就是"没反应"（子代理直接返回 null）。
 
 ## C. 质量 / 输出异常
 
-### C1. prompt ≥1024 token 时引擎崩（`hyper_prefill.mix` 的 `_scaled_mm` 在 SM120 不支持）
+### C1. 【已作废 2026-11-20】prompt ≥1024 token 时引擎崩（`hyper_prefill.mix` 的 `_scaled_mm` 在 SM120 不支持）
 
-**根因**：引擎既有 bug，`--context-length 262144` 实际只用得上单 chunk。
-**修法**：本项目修到第二层（`qsa_score_exact` 的 JIT 链接失败，CUDA 13 + MSVC）后**回退**，未闭环。
-**现状**：≤1 K prompt 正常；更长的对话能用，但 prefill 会走慢路径。
+**历史**：11-19 之前，≥1 K token 的 prompt 会因 `hyper_prefill.mix` 的 RowWise `_scaled_mm` 在 SM120 上不支持而崩；
+修到第二层（`qsa_score_exact` 的 JIT 链接）时回退，当时记为"未闭环"。
+
+**现状（已不再复现）**：`docs/07` 的上下文扫描在 4 K / 8 K / 16 K / 32 K / 64 K / 128 K 上全部正常完成，
+prefill 21 376 → 9 018 tok/s、TTFT 377 ms → 14.72 s。也就是说这条路径在 11-19 之后被修好了
+（**修复细节未纳入本次交接**，如实标注）。
+
+**怎么确认你这台是好的**：`python bench\prefill_ladder.py` —— 六档全绿就说明没问题。
 
 ### C2. 长会话（~50 K token）每轮全量重算，`cached=0`，TTFT 30 s+
 
